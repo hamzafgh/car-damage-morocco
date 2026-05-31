@@ -1,0 +1,85 @@
+site_name: car-damage-morocco
+site_description: End-to-end car damage assessment pipeline for the Moroccan market
+site_author: Hamza El Faghloumi
+site_url: https://car-damage-morocco.readthedocs.io
+
+repo_url: https://github.com/hamzafgh/car-damage-morocco
+repo_name: hamzafgh/car-damage-morocco
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: cyan
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: cyan
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Pipeline:
+      - Overview: pipeline/index.md
+      - Stage 0 — Car classifier: pipeline/stage0.md
+      - Stage 1 — Parts segmentation: pipeline/stage1.md
+      - Stage 2 — Damage segmentation: pipeline/stage2.md
+      - Fusion (IoMin): pipeline/fusion.md
+      - Pricing: pipeline/pricing.md
+  - NLP:
+      - Overview: nlp/index.md
+      - Template engine: nlp/templates.md
+      - CNN+LSTM captioner: nlp/captioner.md
+  - Usage:
+      - Overview: usage/index.md
+      - Streamlit dashboard: usage/streamlit.md
+      - Programmatic API: usage/programmatic.md
+      - Tests: usage/tests.md
+  - Notebooks: notebooks.md

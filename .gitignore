@@ -30,6 +30,9 @@ outputs/
 runs/
 *.log
 
+# MkDocs build output (built fresh on Read the Docs)
+site/
+
 # Test artifacts
 .pytest_cache/
 .coverage
