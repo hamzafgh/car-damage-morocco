@@ -612,7 +612,7 @@ def page_about() -> None:
     md(metric_card(
         "PRÉSENTATION", "purple", body=presentation,
         rows=[
-            ("Auteur",         "Hamza El Faghloumi"),
+            ("Auteurs",        "Hamza El Faghloumi · Achraf Lemrani"),
             ("Stack",          "Streamlit · TensorFlow · Ultralytics · OpenCV"),
             ("Langue rapport", "Français 🇲🇦"),
             ("Devise",         "MAD (Dirham marocain)"),

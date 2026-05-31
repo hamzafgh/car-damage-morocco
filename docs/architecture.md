@@ -13,11 +13,11 @@ flowchart TD
     S0 --> M[car_model<br/>1 of 20]
     M --> T{tier<br/>economy / mid_range / premium}
 
-    S1 --> F[Fusion<br/>IoMin ≥ 0.35]
+    S1 --> F[Fusion<br/>IoMin >= 0.35]
     S2 --> F
     F --> Findings[(part, damage)<br/>pairs]
 
-    Findings --> P[Pricing lookup<br/>part × damage × tier]
+    Findings --> P[Pricing lookup<br/>part x damage x tier]
     T --> P
 
     Findings --> N[NLP<br/>French templates]

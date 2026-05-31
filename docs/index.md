@@ -58,6 +58,6 @@ The whole thing runs through a dark **AI NEXUS** Streamlit dashboard.
 
 [github.com/hamzafgh/car-damage-morocco](https://github.com/hamzafgh/car-damage-morocco) — MIT licensed.
 
-## Author
+## Authors
 
-**Hamza El Faghloumi**.
+**Hamza El Faghloumi** · **Achraf Lemrani**
