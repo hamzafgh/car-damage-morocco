@@ -63,12 +63,8 @@ Regenerate after editing the price tables: `python scripts/generate_pricing_csv.
 - `src/car_damage_morocco/nlp/describe_damage.py` — template engine (works today, grammar-correct).
 - `src/car_damage_morocco/nlp/caption_model.py` + `scripts/train_caption_model.py` — CNN+LSTM end-to-end captioner trained via distillation on auto-generated captions. No LLMs, no RAG.
 
-## Project status
-- [x] Stage 0 trained (Kaggle, EfficientNetB0, ~92% test acc)
-- [x] Stage 2 trained (Kaggle, YOLOv8s-seg, mask mAP50 = 0.711)
-- [ ] Stage 1 training (notebook ready, run on Kaggle T4)
-- [x] DamageDetector + fusion + pricing
-- [x] French NLP module (template engine)
-- [x] Streamlit demo
-- [ ] CNN+LSTM captioner training (optional — pipeline works without it)
-- [ ] End-to-end smoke test on a real damaged-car image
+## Trained components
+- **Stage 0** — EfficientNetB0, ~92% test accuracy on 20 Moroccan-market car models (Kaggle).
+- **Stage 2** — YOLOv8s-seg, mask mAP50 = 0.711 on the 4-class damage dataset (Kaggle).
+- **Stage 1** — YOLOv8s-seg fine-tuned on Ultralytics carparts-seg, 23 classes (Kaggle).
+- **Fusion · Pricing · French NLP · Streamlit dashboard** — implemented and tested.
