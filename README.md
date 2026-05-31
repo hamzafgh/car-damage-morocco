@@ -1,6 +1,10 @@
 # car-damage-morocco
 
+[![Docs](https://readthedocs.org/projects/car-damage-morocco/badge/?version=latest)](https://car-damage-morocco.readthedocs.io/)
+
 End-to-end car damage assessment for the Moroccan market. Photo → car model → damaged parts → cost estimate in MAD → French-language report.
+
+📖 **[Full documentation → car-damage-morocco.readthedocs.io](https://car-damage-morocco.readthedocs.io/)**
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the system design.
 
