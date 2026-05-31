@@ -22,7 +22,7 @@ Three-phase fine-tuning of EfficientNetB0:
 
 Outputs: `car_classifier_efficientnet_b0.keras` → place at `models/stage0/best.keras`.
 
-Final test accuracy: **~92%**.
+Final test accuracy: **87.2 %** (weighted avg F1: 0.87).
 
 ## Stage 1 — Parts segmentation
 

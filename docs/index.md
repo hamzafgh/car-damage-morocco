@@ -50,8 +50,9 @@ The whole thing runs through a dark **AI NEXUS** Streamlit dashboard.
 
 | Stage | Model | Metric | Value |
 |---|---|---|---|
-| 0 | EfficientNetB0 | Test accuracy | ~92% |
-| 2 | YOLOv8s-seg | Mask mAP50 | 0.711 |
+| 0 | EfficientNetB0 | Test accuracy | **87.2 %** |
+| 1 | YOLOv8s-seg | Mask mAP50 | **0.722** |
+| 2 | YOLOv8s-seg | Mask mAP50 | **0.714** |
 
 ## Repository
 
