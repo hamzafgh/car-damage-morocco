@@ -61,7 +61,7 @@ Regenerate after editing the price tables: `python scripts/generate_pricing_csv.
 
 ## NLP — French damage description
 - `src/car_damage_morocco/nlp/describe_damage.py` — template engine (works today, grammar-correct).
-- `src/car_damage_morocco/nlp/caption_model.py` + `scripts/train_caption_model.py` — CNN+LSTM end-to-end captioner trained via distillation on auto-generated captions. No LLMs, no RAG.
+- `src/car_damage_morocco/nlp/caption_model.py` + `scripts/train_caption_model.py` — CNN+LSTM end-to-end captioner trained via distillation on auto-generated captions.
 
 ## Trained components
 - **Stage 0** — EfficientNetB0, ~92% test accuracy on 20 Moroccan-market car models (Kaggle).

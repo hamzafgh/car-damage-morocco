@@ -1,4 +1,4 @@
-"""CNN + LSTM image-captioning model (no LLM, no RAG, no transformer).
+"""CNN + LSTM image-captioning model.
 
 Architecture
 ------------
