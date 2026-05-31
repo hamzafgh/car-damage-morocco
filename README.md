@@ -1,0 +1,74 @@
+# car-damage-morocco
+
+End-to-end car damage assessment for the Moroccan market. Photo → car model → damaged parts → cost estimate in MAD → French-language report.
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the system design.
+
+## Quick start
+
+```bash
+python -m venv .venv && .venv\Scripts\activate          # Windows
+# python -m venv .venv && source .venv/bin/activate     # macOS / Linux
+pip install -r requirements.txt
+```
+
+### Drop trained weights in place
+After training each stage on Kaggle, download the weights and copy them here:
+
+| Stage | Source file (on Kaggle) | Place here |
+|---|---|---|
+| 0 | `/kaggle/working/car_classifier_efficientnet_b0.keras` | `models/stage0/best.keras` |
+| 1 | `/kaggle/working/stage1_deliverables/parts_seg_best.pt` | `models/stage1/best.pt` |
+| 2 | `/kaggle/working/damage_segmenter_yolov8s.pt` | `models/stage2/best.pt` |
+
+### Run the Streamlit demo
+```bash
+streamlit run app/streamlit_app.py
+```
+Upload an image, watch detections, get a French report with MAD pricing.
+
+### Programmatic use
+```python
+import cv2
+from car_damage_morocco import DamageDetector
+from car_damage_morocco.detector import default_detector
+
+detector = default_detector()                       # reads from models/ + data/
+result   = detector.predict(cv2.imread("car.jpg"), render=True)
+
+print(result.car_display, result.car_confidence)
+print(result.total_MAD, "MAD")
+print(result.report_fr)
+for f in result.findings:
+    print(f.part, f.damage_type, f.cost_MAD)
+```
+
+## Tests
+```bash
+python -m pytest tests -v
+```
+Smoke tests run without weights — they validate CSV/JSON alignment, fusion math, and French templates.
+
+## Training notebooks
+All three are in `notebooks/`. Upload to Kaggle, run on T4 GPU:
+- `stage0_car_classifier.ipynb` — EfficientNetB0, 20 Moroccan-market models
+- `stage1_parts_seg_train.ipynb` — YOLOv8s-seg on Ultralytics carparts-seg (23 classes)
+- `stage2_damage_seg_train.ipynb` — YOLOv8s-seg on Roboflow is_it_damaged v6 → 4 classes
+
+## Pricing
+`data/prix_reparation_maroc.csv` — 162 rows (part × damage × tier in MAD).
+Regenerate after editing the price tables: `python scripts/generate_pricing_csv.py`.
+
+## NLP — French damage description
+- `src/car_damage_morocco/nlp/describe_damage.py` — template engine (works today, grammar-correct).
+- `src/car_damage_morocco/nlp/caption_model.py` + `scripts/train_caption_model.py` — CNN+LSTM end-to-end captioner trained via distillation on auto-generated captions. No LLMs, no RAG.
+
+## Project status
+- [x] Stage 0 trained (Kaggle, EfficientNetB0, ~92% test acc)
+- [x] Stage 2 trained (Kaggle, YOLOv8s-seg, mask mAP50 = 0.711)
+- [ ] Stage 1 training (notebook ready, run on Kaggle T4)
+- [x] DamageDetector + fusion + pricing
+- [x] French NLP module (template engine)
+- [x] Streamlit demo
+- [ ] CNN+LSTM captioner training (optional — pipeline works without it)
+- [ ] End-to-end smoke test on a real damaged-car image

@@ -1,0 +1,5 @@
+{
+  "_comment": "Stage 2 damage segmentation. Confirmed from notebooks/stage2_damage_seg_train.ipynb (NEW_NAMES dict). Original Roboflow is_it_damaged v6 has 7 classes; the notebook remaps to these 4.",
+  "input_size": [640, 640],
+  "class_names": ["dent", "scratch", "glass", "broken_part"]
+}

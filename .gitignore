@@ -1,0 +1,40 @@
+# Model weights — too big for git, fetched from Kaggle output
+models/**/*.pt
+models/**/*.h5
+models/**/*.keras
+models/**/*.weights
+!models/**/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Generated outputs
+outputs/
+runs/
+*.log
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data caches
+data/cache/
+*.cache

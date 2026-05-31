@@ -1,0 +1,26 @@
+{
+  "_comment": "Maps each Stage-0 car model to a pricing tier used by prix_reparation_maroc.csv. compcars_id is the original CompCars model_id from the Stage-0 training set. Edit tiers freely if your market intuition differs.",
+  "tiers": ["economy", "mid_range", "premium"],
+  "models": [
+    { "compcars_id": "1041", "make_id": "5",   "label": "Dacia Logan",      "tier": "economy"   },
+    { "compcars_id": "1040", "make_id": "5",   "label": "Dacia Duster",     "tier": "economy"   },
+    { "compcars_id": "1042", "make_id": "5",   "label": "Dacia Sandero",    "tier": "economy"   },
+    { "compcars_id": "273",  "make_id": "102", "label": "Peugeot 208",      "tier": "economy"   },
+    { "compcars_id": "258",  "make_id": "102", "label": "Peugeot 301",      "tier": "economy"   },
+    { "compcars_id": "261",  "make_id": "102", "label": "Peugeot 308",      "tier": "mid_range" },
+    { "compcars_id": "793",  "make_id": "160", "label": "Renault Clio",     "tier": "economy"   },
+    { "compcars_id": "795",  "make_id": "160", "label": "Renault Captur",   "tier": "mid_range" },
+    { "compcars_id": "501",  "make_id": "73",  "label": "VW Golf",          "tier": "mid_range" },
+    { "compcars_id": "435",  "make_id": "73",  "label": "VW Polo",          "tier": "mid_range" },
+    { "compcars_id": "446",  "make_id": "73",  "label": "VW Tiguan",        "tier": "mid_range" },
+    { "compcars_id": "124",  "make_id": "77",  "label": "Mercedes C-Class", "tier": "premium"   },
+    { "compcars_id": "127",  "make_id": "77",  "label": "Mercedes E-Class", "tier": "premium"   },
+    { "compcars_id": "965",  "make_id": "118", "label": "Hyundai Tucson",   "tier": "mid_range" },
+    { "compcars_id": "966",  "make_id": "118", "label": "Hyundai Accent",   "tier": "economy"   },
+    { "compcars_id": "649",  "make_id": "134", "label": "Fiat Punto",       "tier": "economy"   },
+    { "compcars_id": "1253", "make_id": "158", "label": "Citroen Elysee",   "tier": "economy"   },
+    { "compcars_id": "1258", "make_id": "158", "label": "Citroen C4L",      "tier": "mid_range" },
+    { "compcars_id": "1323", "make_id": "39",  "label": "Toyota Corolla",   "tier": "mid_range" },
+    { "compcars_id": "1389", "make_id": "39",  "label": "Toyota Yaris",     "tier": "economy"   }
+  ]
+}

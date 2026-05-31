@@ -1,0 +1,29 @@
+{
+  "_comment": "Ultralytics built-in carparts-seg class order (23 classes, ids 0..22). Confirmed by inspecting carparts-seg.yaml in the actual downloaded zip. NOTE: there is no back_window or front_window class — the dataset uses 'object' as a catch-all at id 18, which we exclude from pricing.",
+  "input_size": [640, 640],
+  "class_names": [
+    "back_bumper",
+    "back_door",
+    "back_glass",
+    "back_left_door",
+    "back_left_light",
+    "back_light",
+    "back_right_door",
+    "back_right_light",
+    "front_bumper",
+    "front_door",
+    "front_glass",
+    "front_left_door",
+    "front_left_light",
+    "front_light",
+    "front_right_door",
+    "front_right_light",
+    "hood",
+    "left_mirror",
+    "object",
+    "right_mirror",
+    "tailgate",
+    "trunk",
+    "wheel"
+  ]
+}
