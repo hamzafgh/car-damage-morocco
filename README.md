@@ -50,10 +50,13 @@ python -m pytest tests -v
 Smoke tests run without weights — they validate CSV/JSON alignment, fusion math, and French templates.
 
 ## Training notebooks
-All three are in `notebooks/`. Upload to Kaggle, run on T4 GPU:
-- `stage0_car_classifier.ipynb` — EfficientNetB0, 20 Moroccan-market models
-- `stage1_parts_seg_train.ipynb` — YOLOv8s-seg on Ultralytics carparts-seg (23 classes)
-- `stage2_damage_seg_train.ipynb` — YOLOv8s-seg on Roboflow is_it_damaged v6 → 4 classes
+Three Kaggle notebooks (T4 GPU). Pre-rendered HTML views are linked below if GitHub's notebook renderer struggles with them.
+
+| Stage | Model | Dataset | View |
+|---|---|---|---|
+| `stage0_car_classifier.ipynb` | EfficientNetB0 | 20 Moroccan-market models | [HTML](https://raw.githack.com/hamzafgh/car-damage-morocco/main/docs/notebooks/stage0_car_classifier.html) · [Colab](https://colab.research.google.com/github/hamzafgh/car-damage-morocco/blob/main/notebooks/stage0_car_classifier.ipynb) |
+| `stage1_parts_seg_train.ipynb` | YOLOv8s-seg | Ultralytics carparts-seg (23 classes) | [HTML](https://raw.githack.com/hamzafgh/car-damage-morocco/main/docs/notebooks/stage1_parts_seg_train.html) · [Colab](https://colab.research.google.com/github/hamzafgh/car-damage-morocco/blob/main/notebooks/stage1_parts_seg_train.ipynb) |
+| `stage2_damage_seg_train.ipynb` | YOLOv8s-seg | Roboflow `is_it_damaged` v6, 7 → 4 classes | [HTML](https://raw.githack.com/hamzafgh/car-damage-morocco/main/docs/notebooks/stage2_damage_seg_train.html) · [Colab](https://colab.research.google.com/github/hamzafgh/car-damage-morocco/blob/main/notebooks/stage2_damage_seg_train.ipynb) |
 
 ## Pricing
 `data/prix_reparation_maroc.csv` — 162 rows (part × damage × tier in MAD).
