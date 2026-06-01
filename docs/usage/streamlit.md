@@ -122,7 +122,7 @@ Project credits and stack summary:
 
 | Field | Value |
 |---|---|
-| Auteur | Hamza El Faghloumi |
+| Auteurs | Hamza El Faghloumi · Achraf Lemrani |
 | Stack | Streamlit · TensorFlow · Ultralytics · OpenCV |
 | Langue rapport | Français MA |
 | Devise | MAD (Dirham marocain) |
